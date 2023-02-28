@@ -29,4 +29,4 @@ jobs:
       - name: Build Nix Shell
         run: nix develop -L --command true
       - name: Publish NPM Packages
-        run: nix develop --command yarn && scripts/npm-publish-commit.sh
+        run: nix develop --command sh -c 'yarn && scripts/npm-publish-commit.sh'
