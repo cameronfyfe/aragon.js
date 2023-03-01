@@ -1,6 +1,6 @@
 {
   "name": "@eqty/aragon-wrapper",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Library for Aragon client implementations",
   "main": "dist/index.js",
   "files": [
