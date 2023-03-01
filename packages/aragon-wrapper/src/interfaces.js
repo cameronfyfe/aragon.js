@@ -8,6 +8,7 @@ import abiAragonForwarder from '@eqty/aragon-os/abi/IForwarder'
 import abiAragonForwarderFee from '@eqty/aragon-os/abi/IForwarderFee'
 import abiAragonSubDaoProvider from '@eqty/aragon-os/abi/ISubDaoProvider'
 
+import abiAragonKernel from '@eqty/aragon-os/abi/Kernel'
 import abiAragonEVMScriptRegistry from '@eqty/aragon-os/abi/EVMScriptRegistry'
 import abiERC20 from '@eqty/aragon-os/abi/ERC20'
 import abiApmRegistry from '@eqty/aragon-os/abi/APMRegistry'
@@ -28,6 +29,7 @@ const ABIS = {
   'aragon/ERCProxy': abiAragonERCProxy.abi,
   'aragon/Forwarder': abiAragonForwarder.abi,
   'aragon/ForwarderFee': abiAragonForwarderFee.abi,
+  'aragon/SubDaoProvider': abiAragonSubDaoProvider.abi,
   'aragon/Kernel': abiAragonKernel.abi,
   'aragon/EVM Script Registry': abiAragonEVMScriptRegistry.abi,
   'apm/APM Registry': abiApmRegistry.abi,

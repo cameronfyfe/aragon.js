@@ -397,18 +397,23 @@ export default class Aragon {
 
       const appProxy = makeProxy(proxyAddress, 'AppProxy', this.web3)
       const appProxyForwarder = makeProxy(proxyAddress, 'Forwarder', this.web3)
+      const appProxySubDaoProvider = makeProxy(proxyAddress, 'SubDaoProvider', this.web3)
 
       return Promise.all([
         appProxy.call('kernel'),
         appProxy.call('appId'),
         appProxy.call('implementation'),
         // Not all apps implement the forwarding interface
-        appProxyForwarder.call('isForwarder').catch(() => false)
+        appProxyForwarder.call('isForwarder').catch(() => false),
+        appProxySubDaoProvider.call('isSubDaoProvider').catch(() => false),
+        appProxySubDaoProvider.call('getSubDaos').catch(() => [])
       ]).then((values) => ({
         kernelAddress: values[0],
         appId: values[1],
         codeAddress: values[2],
-        isForwarder: values[3]
+        isForwarder: values[3],
+        isSubDaoProvider: values[4],
+        subDaos: values[5]
       }))
     })
 
