@@ -10,16 +10,6 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@aragon/os@^4.2.1":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@aragon/os/-/os-4.4.0.tgz#af3e80b11f71209f86dba8b2b3f37a4b025aff7b"
-  integrity sha512-EYyMj5pX0Qxu7axHAPe4hqwwDINDn+6ZZ4DqJP0tAKYKDmTxHcW8m/7DDctIM3uRqXr8HlYrNOGd6zE/hhHetQ==
-  dependencies:
-    "@aragon/truffle-config-v4" "^1.0.1"
-    homedir "^0.6.0"
-    mkdirp "^0.5.1"
-    truffle-flattener "^1.2.9"
-
 "@aragon/rpc-messenger@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@aragon/rpc-messenger/-/rpc-messenger-2.0.0.tgz#84d621fca88a723dc01db4f67b3936b6387a2c33"
@@ -1006,6 +996,16 @@
   integrity sha512-huLSkUuM2/P+U0uy2WwlKuixMsTODD8p4JVQBI4VKeopkiN0C7M3N9XYVawb4M+4spN5RrO/eLhk7KoQX6nsfA==
   dependencies:
     arrify "^1.0.1"
+
+"@eqty/aragon-os@4.5.0-main-64c54bd":
+  version "4.5.0-main-64c54bd"
+  resolved "https://registry.yarnpkg.com/@eqty/aragon-os/-/aragon-os-4.5.0-main-64c54bd.tgz#b4be0d6b9260677dabae08dfccf158d03294430e"
+  integrity sha512-jqVuau7BWnWL7WVWoiHQj8ESdhdu3UQWUJTWETfMWzUpGebWnmk6l4fHUxo9wbUwGahvnexPe71J33xXBNwlQw==
+  dependencies:
+    "@aragon/truffle-config-v4" "^1.0.1"
+    homedir "^0.6.0"
+    mkdirp "^0.5.1"
+    truffle-flattener "^1.2.9"
 
 "@ethereumjs/common@2.5.0":
   version "2.5.0"

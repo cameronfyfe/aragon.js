@@ -1,17 +1,18 @@
 import { apmAppId } from './utils/apps'
 
 // ABIs
-import abiAragonACL from '@aragon/os/abi/ACL'
-import abiAragonAppProxy from '@aragon/os/abi/AppProxyBase'
-import abiAragonERCProxy from '@aragon/os/abi/ERCProxy'
-import abiAragonForwarder from '@aragon/os/abi/IForwarder'
-import abiAragonForwarderFee from '@aragon/os/abi/IForwarderFee'
-import abiAragonKernel from '@aragon/os/abi/Kernel'
-import abiAragonEVMScriptRegistry from '@aragon/os/abi/EVMScriptRegistry'
-import abiERC20 from '@aragon/os/abi/ERC20'
-import abiApmRegistry from '@aragon/os/abi/APMRegistry'
-import abiApmRepo from '@aragon/os/abi/Repo'
-import abiApmEnsSubdomainRegistrar from '@aragon/os/abi/ENSSubdomainRegistrar'
+import abiAragonACL from '@eqty/aragon-os/abi/ACL'
+import abiAragonAppProxy from '@eqty/aragon-os/abi/AppProxyBase'
+import abiAragonERCProxy from '@eqty/aragon-os/abi/ERCProxy'
+import abiAragonForwarder from '@eqty/aragon-os/abi/IForwarder'
+import abiAragonForwarderFee from '@eqty/aragon-os/abi/IForwarderFee'
+import abiAragonSubDaoProvider from '@eqty/aragon-os/abi/ISubDaoProvider'
+
+import abiAragonEVMScriptRegistry from '@eqty/aragon-os/abi/EVMScriptRegistry'
+import abiERC20 from '@eqty/aragon-os/abi/ERC20'
+import abiApmRegistry from '@eqty/aragon-os/abi/APMRegistry'
+import abiApmRepo from '@eqty/aragon-os/abi/Repo'
+import abiApmEnsSubdomainRegistrar from '@eqty/aragon-os/abi/ENSSubdomainRegistrar'
 
 // Artifacts
 import artifactsAragonACL from '../artifacts/aragon/ACL.json'
