@@ -407,14 +407,43 @@ export default class Aragon {
         appProxyForwarder.call('isForwarder').catch(() => false),
         appProxySubDaoProvider.call('isSubDaoProvider').catch(() => false),
         appProxySubDaoProvider.call('getSubDaos').catch(() => [])
-      ]).then((values) => ({
-        kernelAddress: values[0],
-        appId: values[1],
-        codeAddress: values[2],
-        isForwarder: values[3],
-        isSubDaoProvider: values[4],
-        subDaos: values[5]
-      }))
+      ]).then(async (values) => {
+        const kernelAddress = values[0]
+        const appId = values[1]
+        const codeAddress = values[2]
+        const isForwarder = values[3]
+        const isSubDaoProvider = values[4]
+        const _subDaos = values[5]
+
+        const kernelAppNamespace = '0xd6f028ca0e8edb4a8c9757ca4fdccab25fa1e0317da1188108f7d2dee14902fb'
+        const appId_Agent = '0x9ac98dc5f995bf0211ed589ef022719d1487e5cb2bab505676f0d084c07cf89a'
+
+        const subDaos = await (async () => {
+          let subDaos = []
+          for (var i=0; i<_subDaos.length; i++) {
+            const { addr } = _subDaos[i]
+            const kernel = makeProxy(addr, 'Kernel', this.web3)
+            const agent = await kernel.call('getApp', kernelAppNamespace, appId_Agent)
+            const subDaoPermissionApps = [
+              { appName: 'Agent', address: agent },
+            ]
+            subDaos.push({
+              ..._subDaos[i],
+              permissionApps: subDaoPermissionApps,
+            })
+          }
+          return subDaos
+        })()
+
+        return {
+          kernelAddress,
+          appId,
+          codeAddress,
+          isForwarder,
+          isSubDaoProvider,
+          subDaos,
+        }
+      })
     })
 
     /******************************
