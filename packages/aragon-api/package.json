@@ -83,7 +83,7 @@
   },
   "dependencies": {
     "rxjs": "^6.5.2",
-    "@aragon/rpc-messenger": "^2.0.0",
+    "@eqty/aragon-rpc-messenger": "1.0.0-main-d202011",
     "@babel/runtime": "^7.1.2"
   }
 }

@@ -25,7 +25,7 @@
     "prepublishOnly": "env NODE_ENV=production npm run build"
   },
   "peerDependencies": {
-    "@aragon/api": "^2.0.0",
+    "@eqty/aragon-api": "1.0.0-main-d202011",
     "react": "^16.8.0"
   },
   "devDependencies": {

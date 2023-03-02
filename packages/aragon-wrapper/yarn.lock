@@ -10,15 +10,6 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@aragon/rpc-messenger@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@aragon/rpc-messenger/-/rpc-messenger-2.0.0.tgz#84d621fca88a723dc01db4f67b3936b6387a2c33"
-  integrity sha512-voJVVgI97MIeUQUTjHOH9GLzMjCvJlp6L2MEsj3nGKgj01VkFVZR7AlooDqqNytAnVnLvJmERtuZ2oXE33UtCg==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    rxjs "^6.5.2"
-    uuid "^3.2.1"
-
 "@aragon/truffle-config-v4@^1.0.1":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@aragon/truffle-config-v4/-/truffle-config-v4-1.2.0.tgz#0c9036c78bdd270367861b336f9fc8ce7989f64d"
@@ -1006,6 +997,15 @@
     homedir "^0.6.0"
     mkdirp "^0.5.1"
     truffle-flattener "^1.2.9"
+
+"@eqty/aragon-rpc-messenger@1.0.0-main-d202011":
+  version "1.0.0-main-d202011"
+  resolved "https://registry.yarnpkg.com/@eqty/aragon-rpc-messenger/-/aragon-rpc-messenger-1.0.0-main-d202011.tgz#b1a8b418e88096fc13dfa2c0227a1646e91bf318"
+  integrity sha512-uVct6Se8eX/XaVrAEGT7zRb2E2DjqbuDmoozJ4l3lykt0TDoXn9oDolgGVkIAGOaq19XhH+jj9L7YVricUqQjA==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    rxjs "^6.5.2"
+    uuid "^3.2.1"
 
 "@ethereumjs/common@2.5.0":
   version "2.5.0"
