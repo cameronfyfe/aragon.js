@@ -1,12 +1,14 @@
 import { filter, first, map, takeWhile } from 'rxjs/operators'
 import { defer } from 'rxjs'
 import jsonrpc from './jsonrpc'
+import Provider from './providers/Provider'
 import MessagePortMessage from './providers/MessagePortMessage'
 import WindowMessage from './providers/WindowMessage'
 import DevMessage from './providers/DevMessage'
 
 export { default as signals } from './signals'
 export const providers = {
+  ProviderBase: Provider,
   MessagePortMessage,
   WindowMessage,
   DevMessage
